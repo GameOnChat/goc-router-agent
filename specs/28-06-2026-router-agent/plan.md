@@ -168,13 +168,13 @@ The router classifies all four routes even though only Lore Keeper is wired in M
 
 ### Step 1 — Scaffold the NestJS + Fastify service
 
-- [ ] Run `npx @nestjs/cli new goc-router-agent --package-manager npm --strict` (TypeScript, strict mode).
-- [ ] Install Fastify adapter and dependencies: `npm install @nestjs/platform-fastify @nestjs/terminus @nestjs/config @langchain/openai @langchain/core langchain class-validator class-transformer`.
-- [ ] Install dev deps: `npm install --save-dev @types/node`.
-- [ ] Update `src/main.ts` to use `FastifyAdapter` on port `process.env.PORT || 3004`, with `useGlobalPipes(new ValidationPipe({ whitelist: true }))`.
-- [ ] Update `src/app.module.ts` to import `ConfigModule.forRoot()`.
-- [ ] Create `src/health/health.module.ts` and `src/health/health.controller.ts` exposing `GET /health` via `TerminusModule` with a simple HTTP health indicator.
-- [ ] Wire `HealthModule` into `AppModule`.
+- [x] Run `npx @nestjs/cli new goc-router-agent --package-manager npm --strict` (TypeScript, strict mode).
+- [x] Install Fastify adapter and dependencies: `npm install @nestjs/platform-fastify @nestjs/terminus @nestjs/config @langchain/openai @langchain/core langchain class-validator class-transformer`.
+- [x] Install dev deps: `npm install --save-dev @types/node`.
+- [x] Update `src/main.ts` to use `FastifyAdapter` on port `process.env.PORT || 3004`, with `useGlobalPipes(new ValidationPipe({ whitelist: true }))`.
+- [x] Update `src/app.module.ts` to import `ConfigModule.forRoot()`.
+- [x] Create `src/health/health.module.ts` and `src/health/health.controller.ts` exposing `GET /health` via `TerminusModule` with a simple HTTP health indicator.
+- [x] Wire `HealthModule` into `AppModule`.
 
 **Verify:**
 - `npm run build` exits 0 (TypeScript compiles with no errors).
