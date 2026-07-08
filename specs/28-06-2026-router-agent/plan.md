@@ -186,12 +186,12 @@ The router classifies all four routes even though only Lore Keeper is wired in M
 
 ### Step 2 — Define DTOs and routing constants
 
-- [ ] Write failing test `src/router/dto/route-request.dto.spec.ts`:
+- [x] Write failing test `src/router/dto/route-request.dto.spec.ts`:
   - Assert `RouteRequestDto` with `userMessage: ""` fails `class-validator` validation (`IsNotEmpty`).
   - Assert `RouteRequestDto` with no `userMessage` field fails validation.
   - Assert `RouteRequestDto` with valid `userMessage` and no `conversationHistory` passes validation.
   - Assert `RouteRequestDto` with valid `userMessage` and a `conversationHistory` array passes validation.
-- [ ] Create `src/router/dto/route-request.dto.ts`:
+- [x] Create `src/router/dto/route-request.dto.ts`:
   ```typescript
   export class MessageDto {
     @IsString() @IsIn(['user', 'assistant']) role: string;
@@ -203,9 +203,9 @@ The router classifies all four routes even though only Lore Keeper is wired in M
     conversationHistory?: MessageDto[];
   }
   ```
-- [ ] Create `src/router/dto/route-response.dto.ts`: `{ route: string; confidence: number }`.
-- [ ] Create `src/router/constants/routes.ts`: `export const ROUTES = { LORE, RECOMMENDATION, HARDWARE, GENERAL_CHAT }` and `export const FALLBACK_RESULT`.
-- [ ] Make tests pass.
+- [x] Create `src/router/dto/route-response.dto.ts`: `{ route: string; confidence: number }`.
+- [x] Create `src/router/constants/routes.ts`: `export const ROUTES = { LORE, RECOMMENDATION, HARDWARE, GENERAL_CHAT }` and `export const FALLBACK_RESULT`.
+- [x] Make tests pass.
 
 **Verify:**
 - `RouteRequestDto` with `userMessage: ""` → validation error (`IsNotEmpty`).
