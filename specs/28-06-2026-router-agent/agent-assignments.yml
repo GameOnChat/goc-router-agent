@@ -1,0 +1,261 @@
+# Agent Assignments: Router Agent + API Gateway
+# Feature: Implement the Router Agent & API Gateway (goc-router-agent) Milestone 2 MVP
+# Generated: 2026-07-20
+# Tasks Source: goc-router-agent/specs/28-06-2026-router-agent/tasks.md
+
+agents_registry:
+  - name: "node_backend_expert"
+    source: "user"
+    description: "NestJS backend services, Express, Fastify, APIs, server runtime behavior"
+  - name: "typescript_expert"
+    source: "user"
+    description: "TypeScript types, strictness, generics, inference, tsconfig"
+  - name: "websocket_engineer"
+    source: "user"
+    description: "WebSocket architectures, bidirectional protocols, event-driven systems"
+  - name: "auth_specialist"
+    source: "user"
+    description: "Authentication, authorization, OAuth, OIDC, sessions, JWTs, RBAC"
+  - name: "test_architect"
+    source: "user"
+    description: "Test strategy, coverage plans, test pyramids, fixtures, CI gates"
+  - name: "test_automator"
+    source: "user"
+    description: "Building robust test frameworks, Jest, comprehensive test coverage"
+  - name: "devops_engineer"
+    source: "user"
+    description: "CI/CD pipelines, containerization, Docker, Compose, infrastructure automation"
+  - name: "api_designer"
+    source: "user"
+    description: "Scalable API design, REST/GraphQL, comprehensive documentation"
+
+assignments:
+  # Phase 1: Project Setup
+  T001:
+    agent: "node_backend_expert"
+    reason: "NestJS + Fastify scaffolding, FastifyAdapter configuration, TypeScript setup"
+
+  T002:
+    agent: "node_backend_expert"
+    reason: "NestJS health module, TerminusModule integration, HTTP health checks"
+
+  # Phase 2: Core Routing (DTOs, Service, Controller, Integration, Accuracy)
+  T003:
+    agent: "test_architect"
+    reason: "Writing failing test spec for DTO validation; part of TDD cycle"
+
+  T004:
+    agent: "typescript_expert"
+    reason: "DTO class definition with decorators, validation, type-safe schema"
+
+  T005:
+    agent: "typescript_expert"
+    reason: "Response DTO with type safety and property constraints"
+
+  T006:
+    agent: "typescript_expert"
+    reason: "Routing constants export and TypeScript const assertion"
+
+  T007:
+    agent: "test_architect"
+    reason: "Jest mock strategy for LangChain.js ChatOpenAI, test suite architecture"
+
+  T008:
+    agent: "api_designer"
+    reason: "System prompt design for routing classification; API contract definition"
+
+  T009:
+    agent: "node_backend_expert"
+    reason: "NestJS @Injectable() service, LangChain.js integration, error handling fallback"
+
+  T010:
+    agent: "test_architect"
+    reason: "Controller test strategy with NestJS testing module and mocks"
+
+  T011:
+    agent: "node_backend_expert"
+    reason: "NestJS @Controller with @Post decorator, DTO validation pipeline"
+
+  T012:
+    agent: "node_backend_expert"
+    reason: "NestJS module creation and AppModule wiring"
+
+  T013:
+    agent: "test_automator"
+    reason: "Full integration test pipeline with real module setup (not mocked)"
+
+  T014:
+    agent: "test_automator"
+    reason: "Building comprehensive labeled test suite with 30+ examples and accuracy gate"
+
+  # Phase 3: Advanced Features (WebSocket, Session, Auth, Health, Logging)
+  T015:
+    agent: "websocket_engineer"
+    reason: "WebSocket dependency installation for socket.io integration"
+
+  T016:
+    agent: "websocket_engineer"
+    reason: "WebSocket gateway module and @WebSocketGateway decorator setup"
+
+  T017:
+    agent: "websocket_engineer"
+    reason: "Socket event handlers (@SubscribeMessage), message/response/error/clarification events"
+
+  T018:
+    agent: "test_architect"
+    reason: "WebSocket gateway test strategy and mock setup"
+
+  T019:
+    agent: "node_backend_expert"
+    reason: "Module wiring and AppModule integration"
+
+  T020:
+    agent: "node_backend_expert"
+    reason: "NestJS @Injectable() session service, in-memory state management, idempotent operations"
+
+  T021:
+    agent: "node_backend_expert"
+    reason: "NestJS module creation for session management"
+
+  T022:
+    agent: "websocket_engineer"
+    reason: "Gateway integration with session history retrieval and message persistence"
+
+  T023:
+    agent: "test_automator"
+    reason: "Session service tests: state isolation, concurrent access, cleanup"
+
+  T024:
+    agent: "auth_specialist"
+    reason: "NestJS Passport API key strategy, authentication flow"
+
+  T025:
+    agent: "auth_specialist"
+    reason: "NestJS CanActivate guard for API key validation"
+
+  T026:
+    agent: "auth_specialist"
+    reason: "Rate limiting service with sliding-window algorithm and token bucket semantics"
+
+  T027:
+    agent: "websocket_engineer"
+    reason: "Gateway authentication handshake and rate limit enforcement in WebSocket handlers"
+
+  T028:
+    agent: "auth_specialist"
+    reason: "Applying @UseGuards(ApiKeyGuard) to controllers for HTTP endpoint protection"
+
+  T029:
+    agent: "test_automator"
+    reason: "Auth and rate limit tests with various attack vectors and edge cases"
+
+  T030:
+    agent: "node_backend_expert"
+    reason: "NestJS @Injectable() health service with circuit breaker and upstream probing"
+
+  T031:
+    agent: "devops_engineer"
+    reason: "Opossum circuit breaker configuration, retry logic, timeout management"
+
+  T032:
+    agent: "node_backend_expert"
+    reason: "Health controller refactoring to use HealthService"
+
+  T033:
+    agent: "test_automator"
+    reason: "Health service tests with mocked downstream dependencies and failure scenarios"
+
+  T034:
+    agent: "node_backend_expert"
+    reason: "Custom logger service extending NestJS ConsoleLogger with JSON formatting"
+
+  T035:
+    agent: "node_backend_expert"
+    reason: "Logger injection and structured logging across services"
+
+  T036:
+    agent: "test_automator"
+    reason: "Logger output format test with JSON parsing and metadata validation"
+
+  # Phase 4: Deployment & Polish
+  T037:
+    agent: "devops_engineer"
+    reason: "Multi-stage Dockerfile with build and production stages, Alpine optimization"
+
+  T038:
+    agent: "devops_engineer"
+    reason: ".dockerignore configuration for clean builds"
+
+  T039:
+    agent: "devops_engineer"
+    reason: ".env.example creation with all configuration variables and sensible defaults"
+
+  T040:
+    agent: "node_backend_expert"
+    reason: "NestJS ConfigModule integration, environment variable typing, defaults"
+
+  T041:
+    agent: "devops_engineer"
+    reason: "Docker Compose service definition, health checks, depends_on conditions"
+
+  # Phase 5: Final Verification & Integration
+  T042:
+    agent: "test_automator"
+    reason: "Full test suite execution and coverage report generation"
+
+  T043:
+    agent: "devops_engineer"
+    reason: "Structural compliance checking and gitignore verification"
+
+  T044:
+    agent: "test_automator"
+    reason: "Manual smoke test execution with real OpenAI API"
+
+  T045:
+    agent: "test_automator"
+    reason: "Fallback behavior validation without valid API credentials"
+
+  T046:
+    agent: "test_architect"
+    reason: "Accuracy gate validation and defensible misclassification analysis"
+
+summary:
+  total_tasks: 46
+  breakdown_by_agent:
+    node_backend_expert: 13
+    websocket_engineer: 7
+    test_automator: 10
+    auth_specialist: 5
+    devops_engineer: 7
+    test_architect: 2
+    api_designer: 1
+  critical_path_agents:
+    - "node_backend_expert"
+    - "typescript_expert"
+    - "test_architect"
+  parallel_tracks:
+    track_a_routing:
+      - "typescript_expert"
+      - "node_backend_expert"
+      - "test_architect"
+      - "test_automator"
+    track_b_websocket:
+      - "websocket_engineer"
+      - "test_architect"
+    track_c_session:
+      - "node_backend_expert"
+      - "test_automator"
+    track_d_auth_rate:
+      - "auth_specialist"
+      - "websocket_engineer"
+      - "test_automator"
+    track_e_health:
+      - "node_backend_expert"
+      - "devops_engineer"
+      - "test_automator"
+    track_f_logging:
+      - "node_backend_expert"
+      - "test_automator"
+    track_g_deployment:
+      - "devops_engineer"
+      - "test_automator"
